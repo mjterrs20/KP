@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TemaApp {
+  static Color greenColor       = Color(0xFF8BCCAB);
+  static Color yellowsColor     = Color(0xFFF2A527);
   static Color redColor         = Color(0xFFB60000);
   static Color orangeColor      = Color(0xFFFF5126);
   static Color purpleColor      = Color(0xFF5c3b95);

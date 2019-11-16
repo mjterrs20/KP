@@ -4,6 +4,9 @@ import 'package:flutter/rendering.dart';
 import 'package:kp/widget/homeicon.dart';
 import 'package:kp/widget/berita.dart';
 import 'package:kp/widget/advetorial.dart';
+import 'package:gradient_app_bar/gradient_app_bar.dart';
+import 'package:kp/utils/colors.dart';
+import 'package:kp/pages/diskon.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -12,11 +15,16 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _current = 0;
-
+  int index = 0;
+  String url = '';
+  void initState() {
+    super.initState();
+    index = 0;
+  }
   List imgList = [
-    'assets/images/carousel1.jpg',
-    'assets/images/carousel2.jpg',
-    'assets/images/carousel3.jpg'
+    'assets/images/ruangguru.jpeg',
+    'assets/images/quiper.jpeg',
+    'assets/images/zenius.jpeg'
   ];
   List<T> map<T>(List list, Function handler) {
     List<T> result = [];
@@ -29,9 +37,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Container(),
-        backgroundColor: Colors.green[600],
+      appBar: GradientAppBar(
+        gradient: LinearGradient(
+          colors: [
+            TemaApp.greenColor,
+            TemaApp.yellowsColor,
+          ],
+          tileMode: TileMode.clamp,
+        ),
+        centerTitle: true,
         elevation: 0.0,
       ),
       body: ListView(
@@ -46,7 +60,15 @@ class _HomePageState extends State<HomePage> {
                   child: Container(
                     width: MediaQuery.of(context).size.width,
                     height: 100.0,
-                    color: Colors.green[600],
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: <Color>[
+                          TemaApp.greenColor,
+                          TemaApp.yellowsColor,
+                        ],
+                      ),
+                    ),
+                    // color: Colors.green[600],
                   ),
                 ),
               ),
@@ -72,17 +94,38 @@ class _HomePageState extends State<HomePage> {
                   items: imgList.map((imgAssets) {
                     return Builder(
                       builder: (BuildContext context) {
-                        return Container(
-                          width: MediaQuery.of(context).size.width,
-                          margin: EdgeInsets.symmetric(horizontal: 10.0),
-                          decoration: BoxDecoration(
-                            color: Colors.green,
-                            image: DecorationImage(
-                              image: AssetImage(imgAssets),
-                              fit: BoxFit.fill,
+                        return GestureDetector(
+                          onTap: () {
+                            print(imgAssets);
+                            if (imgAssets == 'assets/images/ruangguru.jpeg') {
+                              url = 'http://bimbel.ruangguru.com/promo';
+                            }
+                            if (imgAssets == 'assets/images/quiper.jpeg') {
+                              url = 'https://www.quipper.com/id/';
+                            }
+                            if (imgAssets == 'assets/images/zenius.jpeg') {
+                              url = 'https://www.zenius.net/';
+                            }
+                            // buat image assets
+                            print("woy" + url);
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        DiskonPage(url)));
+                          },
+                          child: Container(
+                            width: MediaQuery.of(context).size.width,
+                            margin: EdgeInsets.symmetric(horizontal: 10.0),
+                            decoration: BoxDecoration(
+                              color: Colors.green,
+                              image: DecorationImage(
+                                image: AssetImage(imgAssets),
+                                fit: BoxFit.fill,
+                              ),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5.0)),
                             ),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(5.0)),
                           ),
                         );
                       },
@@ -124,7 +167,7 @@ class _HomePageState extends State<HomePage> {
             child: Text("Berita Terkini"),
           ),
           Container(
-            height: 200.0,
+            height: 150.0,
             margin: EdgeInsets.only(
               top: 15.0,
               bottom: 5.0,
@@ -132,30 +175,57 @@ class _HomePageState extends State<HomePage> {
             child: BeritaWidget(),
           ),
           AdvetorialWidget(),
-          
           // batas menulis di column
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        currentIndex: index,
+        onTap: (int index) {
+          // setState(() {
+          //   this.index = index;
+          //   print(index);
+          // });
+          if(index == 1){
+            Navigator.of(context).pushReplacementNamed('/tipspage');
+          }
+          else if(index == 2){
+            Navigator.of(context).pushReplacementNamed('/chatbotpage');
+          }else if(index == 3){
+            Navigator.of(context).pushReplacementNamed('/profilpage');
+          }
+          else if(index == 4){
+            Navigator.of(context).pushReplacementNamed('/akunpage');
+          }else if(index == 0){
+            Navigator.of(context).pushReplacementNamed('/homepage');
+          }
+          
+        },
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("Home")),
           BottomNavigationBarItem(
-              icon: Icon(Icons.photo_library),
-              title: Text("Feed",
+              icon: Icon(Icons.home),
+              title: Text("home",
                   style: new TextStyle(
                       color: Colors.black,
                       fontSize: 14.0,
                       fontFamily: 'Camfortaa'))),
           BottomNavigationBarItem(
-              icon: Icon(Icons.assignment_turned_in),
-              title: Text("Official Store",
+              icon: Icon(Icons.timeline),
+              title: Text("Tips & Tricks",
                   style: new TextStyle(
                       color: Colors.black,
                       fontSize: 12.0,
                       fontFamily: 'Camfortaa'))),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            title: Text("Keranjang",
+              icon: Icon(Icons.chat),
+              title: Text("Chat",
+                  style: new TextStyle(
+                      color: Colors.black,
+                      fontSize: 14.0,
+                      fontFamily: 'Camfortaa'))),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.group),
+            title: Text("Team",
                 style: new TextStyle(
                     color: Colors.black,
                     fontSize: 14.0,
@@ -170,7 +240,6 @@ class _HomePageState extends State<HomePage> {
                     fontFamily: 'Camfortaa')),
           ),
         ],
-        type: BottomNavigationBarType.fixed,
       ),
     );
   }

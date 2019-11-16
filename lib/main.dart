@@ -4,7 +4,16 @@ import 'package:kp/pages/coba.dart';
 import 'package:kp/pages/second.dart';
 import 'package:kp/pages/splashscreen.dart';
 import 'package:kp/pages/home.dart';
-import 'package:flutter_dialogflow/dialogflow_v2.dart';
+import 'package:kp/pages/beasiswa.dart';
+import 'package:kp/pages/berita.dart';
+import 'package:kp/pages/bimbel.dart';
+import 'package:kp/pages/jurusan.dart';
+import 'package:kp/pages/private.dart';
+import 'package:kp/pages/universitas.dart';
+import 'package:kp/pages/chatbot.dart';
+import 'package:kp/pages/tips.dart';
+import 'package:kp/pages/profilteam.dart';
+import 'package:kp/pages/akun.dart';
 
 void main() {
   return runApp( MyApp());
@@ -15,11 +24,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
        debugShowCheckedModeBanner: false,
-      title: 'MelekPedia',
+      title: 'Pabanang',
       home: SplashScreen(),
       routes: <String, WidgetBuilder>{
         '/homepage': (BuildContext context) => HomePage(),
-  
+        '/beasiswapage': (BuildContext context) => BeasiswaPage(),
+        '/beritapage': (BuildContext context) => BeritaPage(),
+        '/bimbelpage': (BuildContext context) => BimbelPage(),
+        '/jurusanpage': (BuildContext context) => JurusanPage(),
+        '/privatepage': (BuildContext context) => PrivatePage(),
+        '/universitaspage': (BuildContext context) => UniversitasPage(),
+        '/chatbotpage': (BuildContext context) => ChatbotPage(),
+        '/tipspage': (BuildContext context) => TipsPage(),
+        '/profilpage': (BuildContext context) => ProfilTeamPage(),
+        '/akunpage': (BuildContext context) => AkunPage(),
       },
       theme: ThemeData(
         primaryColor: Colors.green[600],
