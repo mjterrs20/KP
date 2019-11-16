@@ -34,6 +34,7 @@ dependencies:
   http: "^0.11.3+16" 
   gradient_app_bar:
   flutter_webview_plugin:
+  shared_preferences: ^0.4.2
 
 dev_dependencies:
   flutter_test:
@@ -77,6 +78,7 @@ flutter:
    - assets/images/ruangguru.jpeg
    - assets/images/quiper.jpeg
    - assets/images/zenius.jpeg
+   - assets/images/logo.png
 
   
   fonts:

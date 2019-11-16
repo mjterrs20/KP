@@ -33,7 +33,10 @@ class _UniversitasPageState extends State<UniversitasPage> {
       body: StreamBuilder(
         stream: Firestore.instance.collection('universitas').snapshots(),
         builder: (BuildContext context,AsyncSnapshot<QuerySnapshot> snapshot) {
-          if (!snapshot.hasData) return Text('Loading...');
+          if (!snapshot.hasData) return Center(
+                    child: CircularProgressIndicator(
+                        valueColor:
+                            AlwaysStoppedAnimation<Color>(Color(0xFFB60000))));
           return new ListView.builder(
             itemCount: snapshot.data.documents.length,
             itemBuilder: (context, index) =>
@@ -56,7 +59,7 @@ class _UniversitasPageState extends State<UniversitasPage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           ListTile(
-            leading: Image.network(document['Foto'],),
+            leading: Image.network(document['Foto'],width: 50,height: 50,),
             contentPadding: EdgeInsets.fromLTRB(24.00, 0.00 ,10.00, 0.00),
             title: Text(document['Universitas'],
 							style: TextStyle(

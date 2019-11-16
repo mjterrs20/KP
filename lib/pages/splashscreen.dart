@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:kp/utils/colors.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -10,7 +11,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 2),
+    Timer(Duration(seconds: 3),
         () => Navigator.of(context).pushReplacementNamed('/homepage'));
   }
 
@@ -21,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
         fit: StackFit.expand,
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(color: Theme.of(context).primaryColor),
+            decoration: BoxDecoration(color: TemaApp.greenColor),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -33,10 +34,15 @@ class _SplashScreenState extends State<SplashScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text("MelekPedia",
+                      Image.asset("assets/images/logo.png",
+                      width: 80.0,
+                      height: 100.0,
+                      fit: BoxFit.cover,),
+                      Padding(padding: EdgeInsets.only(top: 30),),
+                      Text("PABANANG EDU",
                           style: new TextStyle(
                               color: Colors.white,
-                              fontSize: 40.0,
+                              fontSize: 20.0,
                               fontFamily: 'Camfortaa',
                               fontWeight: FontWeight.normal))
                     ],
@@ -56,14 +62,14 @@ class _SplashScreenState extends State<SplashScreen> {
                       ),
                       SizedBox(height: 10.0),
                       Text(
-                        "© MelekTechnology",
+                        "© PabanangDev",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 10.0,
                         ),
                       ),
                       Text(
-                        "Ver. 1.0 Beta",
+                        "Ver. 1.0.0+1 Beta",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 8.0,
