@@ -54,7 +54,7 @@ class _AkunPageState extends State<AkunPage> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.of(context).pushNamed('/akunedit');
+                   // taping
                   },
                   child: Container(
                     width: 40,
