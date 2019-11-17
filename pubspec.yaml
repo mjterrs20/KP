@@ -79,6 +79,7 @@ flutter:
    - assets/images/quiper.jpeg
    - assets/images/zenius.jpeg
    - assets/images/logo.png
+   - assets/images/user.png
 
   
   fonts:

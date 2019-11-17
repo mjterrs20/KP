@@ -26,7 +26,7 @@ class _UniversitasDetailPageState extends State<UniversitasDetailPage> {
           ],
           tileMode: TileMode.clamp,
         ),
-        title: Text("Universitas"),
+        title: Text("Detail Universitas"),
         centerTitle: true,
         elevation: 0.0,
       ),
@@ -34,7 +34,10 @@ class _UniversitasDetailPageState extends State<UniversitasDetailPage> {
         stream: Firestore.instance.collection('universitas').document(widget.articleID).snapshots(),
         builder: (context, snapshot) {
         if (!snapshot.hasData) {
-          return Text("Loading");
+          return  Center(
+                    child: CircularProgressIndicator(
+                        valueColor:
+                            AlwaysStoppedAnimation<Color>(Color(0xFFB60000))));
         }
         var contentDocument = snapshot.data;
         return GestureDetector(
@@ -42,7 +45,7 @@ class _UniversitasDetailPageState extends State<UniversitasDetailPage> {
             padding: EdgeInsets.fromLTRB(20.00, 15.00 ,20.00, 0.00),
             children: <Widget>[
               Padding(
-                padding: EdgeInsets.fromLTRB(0.00, 0.00 ,0.00, 5.00),
+                padding: EdgeInsets.fromLTRB(0.00, 0.00 ,0.00, 20.0),
                 child: Text(contentDocument['Universitas'], style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0, fontFamily: 'Comfortaa', color:Color(0xff747474)),),
               ),
               Padding(
@@ -50,22 +53,17 @@ class _UniversitasDetailPageState extends State<UniversitasDetailPage> {
                 child: Image.network(contentDocument['Foto'],),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(0.00, 10.00 ,0.00, 10.00),
-                child: Text(contentDocument['Akreditasi'],textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14.0,fontFamily: 'Comfortaa',color:Color(0xff747474)),),
+                padding: EdgeInsets.fromLTRB(0.00, 5.00 ,0.00, 5.00),
+                child: Text("Akreditasi: "+contentDocument['Akreditasi']+"  Status: "+contentDocument['Status'],textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14.0,fontFamily: 'Comfortaa',color:Color(0xff747474)),),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(0.00, 5.00 ,0.00, 5.00),
+                child: Text(contentDocument['Website'],textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14.0,fontFamily: 'Comfortaa',color:Color(0xff747474)),),
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(0.00, 10.00 ,0.00, 10.00),
-                child: Text(contentDocument['Deskripsi'],textAlign: TextAlign.right, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14.0,fontFamily: 'Comfortaa',color:Color(0xff747474)),),
+                child: Text(contentDocument['Deskripsi'],textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14.0,fontFamily: 'Comfortaa',color:Color(0xff747474)),),
               ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(0.00, 10.00 ,0.00, 10.00),
-                child: Text(contentDocument['Status'],textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14.0,fontFamily: 'Comfortaa',color:Color(0xff747474)),),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(0.00, 10.00 ,0.00, 10.00),
-                child: Text(contentDocument['Website'],textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14.0,fontFamily: 'Comfortaa',color:Color(0xff747474)),),
-              ),
-              
             ],
           ),
         );
