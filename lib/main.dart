@@ -15,6 +15,7 @@ import 'package:kp/pages/tips.dart';
 import 'package:kp/pages/profilteam.dart';
 import 'package:kp/pages/akun.dart';
 import 'package:kp/pages/login.dart';
+import 'package:kp/pages/jurusanku.dart';
 
 void main() {
   return runApp( MyApp());
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
         '/profilpage': (BuildContext context) => ProfilTeamPage(),
         '/akunpage': (BuildContext context) => AkunPage(),
         '/loginpage': (BuildContext context) => LoginPage(),
+        '/jurusankupage': (BuildContext context) => JurusankuPage(),
       },
       theme: ThemeData(
         primaryColor: Colors.green[600],
