@@ -11,7 +11,18 @@ class _JurusankuPageState extends State<JurusankuPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      appBar: GradientAppBar(
+        gradient: LinearGradient(
+          colors: [
+            TemaApp.greenColor,
+            TemaApp.yellowsColor,
+          ],
+          tileMode: TileMode.clamp,
+        ),
+        title: Text("Jusuranku"),
+        centerTitle: true,
+        elevation: 0.0,
+      ),
     );
   }
 }

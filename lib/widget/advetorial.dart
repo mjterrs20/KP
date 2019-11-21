@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kp/utils/colors.dart';
+
 
 
 class AdvetorialWidget extends StatefulWidget {
@@ -207,7 +207,7 @@ class _AdvetorialWidgetState extends State<AdvetorialWidget> {
                           children: <Widget>[
                             GestureDetector(
                               onTap: () {
-                                Navigator.pushNamed(context, '/iklanpromosi');
+                                Navigator.pushNamed(context, '/jurusankupage');
                               },
                               child: Container(
                                 margin: EdgeInsets.only(top: 10),

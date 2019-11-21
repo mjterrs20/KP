@@ -159,7 +159,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Container(
-            padding: const EdgeInsets.fromLTRB(20, 10, 10, 10),
+            padding: const EdgeInsets.fromLTRB(20, 10, 7, 10),
             child: HomeIconPage(),
           ),
           Container(
@@ -167,7 +167,7 @@ class _HomePageState extends State<HomePage> {
             child: Text("Berita Terkini"),
           ),
           Container(
-            height: 150.0,
+            height: 120.0,
             margin: EdgeInsets.only(
               top: 15.0,
               bottom: 5.0,

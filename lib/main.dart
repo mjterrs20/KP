@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kp/pages/testing.dart';
 import 'package:kp/pages/coba.dart';
 import 'package:kp/pages/second.dart';
 import 'package:kp/pages/splashscreen.dart';

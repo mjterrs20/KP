@@ -35,11 +35,15 @@ dependencies:
   gradient_app_bar:
   flutter_webview_plugin:
   shared_preferences: ^0.4.2
+  flutter_launcher_icons: ^0.7.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/logo.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -80,6 +84,10 @@ flutter:
    - assets/images/zenius.jpeg
    - assets/images/logo.png
    - assets/images/user.png
+   - assets/images/1.jpeg
+   - assets/images/2.jpeg
+   - assets/images/3.jpeg
+   - assets/images/4.jpeg
 
   
   fonts:

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kp/utils/colors.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
-import 'package:kp/pages/tipsdetail.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+
 
 class TipsPage extends StatefulWidget {
   @override

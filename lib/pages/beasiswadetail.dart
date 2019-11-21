@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:kp/utils/colors.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
@@ -12,11 +11,12 @@ class BeasiswaDetailPage extends StatefulWidget {
 }
 
 class _BeasiswaDetailPageState extends State<BeasiswaDetailPage> {
-   void initState() {
+  void initState() {
     super.initState();
     print(widget.articleID);
     // Firestore load
   }
+
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -32,6 +32,7 @@ class _BeasiswaDetailPageState extends State<BeasiswaDetailPage> {
                   ],
                   tileMode: TileMode.clamp,
                 ),
+                title: Text("Info Beasiswa"),
                 centerTitle: true,
                 elevation: 0.0,
                 leading: IconButton(

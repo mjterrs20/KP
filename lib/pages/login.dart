@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kp/utils/colors.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
-import 'package:kp/utils/colors.dart';
 import 'package:http/http.dart' as http;
 import 'package:kp/models/login.dart';
 import 'dart:convert';

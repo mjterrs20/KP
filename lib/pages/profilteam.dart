@@ -28,7 +28,7 @@ class _ProfilTeamPageState extends State<ProfilTeamPage> {
         centerTitle: true,
         elevation: 0.0,
       ),
-      body: Center(child: Text("you"),),
+      body: Center(child: Text("RIZKI, RAKA, ERSA"),),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: index,

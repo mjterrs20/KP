@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:kp/utils/colors.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
-import 'package:kp/models/models_mahasiswa.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:kp/pages/beasiswadetail.dart';
 

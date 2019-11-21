@@ -18,8 +18,8 @@ class _HomeIconPageState extends State<HomeIconPage> {
             },
             child: Container(
               margin: EdgeInsets.only(right: 25),
-              width: 100,
-              height: 100,
+              width: 103,
+              height: 103,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -43,8 +43,8 @@ class _HomeIconPageState extends State<HomeIconPage> {
             },
             child: Container(
               margin: EdgeInsets.only(right: 25),
-              width: 100,
-              height: 100,
+              width: 103,
+              height: 103,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -68,8 +68,8 @@ class _HomeIconPageState extends State<HomeIconPage> {
             },
             child: Container(
               margin: EdgeInsets.only(right: 25),
-              width: 100,
-              height: 100,
+              width: 103,
+              height: 103,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[

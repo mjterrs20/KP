@@ -19,7 +19,7 @@ class _DiskonPageState extends State<DiskonPage> {
 
   @override
   Widget build(BuildContext context) {
-    String link = widget.url;
+    
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {

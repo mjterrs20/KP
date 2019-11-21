@@ -33,7 +33,7 @@ class _JurusanDetailPageState extends State<JurusanDetailPage> {
           return  Center(
                     child: CircularProgressIndicator(
                         valueColor:
-                            AlwaysStoppedAnimation<Color>(Color(0xFFB60000))));;
+                            AlwaysStoppedAnimation<Color>(Color(0xFFB60000))));
         }
         var contentDocument = snapshot.data;
         return GestureDetector(

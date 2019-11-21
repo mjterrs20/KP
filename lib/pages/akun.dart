@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kp/utils/colors.dart';
-import 'package:gradient_app_bar/gradient_app_bar.dart';
+
 
 class AkunPage extends StatefulWidget {
   @override
