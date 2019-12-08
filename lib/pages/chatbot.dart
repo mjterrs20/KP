@@ -117,13 +117,13 @@ class _ChatbotPage extends State<ChatbotPage> {
           //   this.index = index;
           // });
           if (index == 1) {
-            Navigator.of(context).pushReplacementNamed('/tipspage');
+            // Navigator.of(context).pushReplacementNamed('/tipspage');
           } else if (index == 2) {
             Navigator.of(context).pushReplacementNamed('/chatbotpage');
           } else if (index == 3) {
-            Navigator.of(context).pushReplacementNamed('/profilpage');
+            // Navigator.of(context).pushReplacementNamed('/profilpage');
           } else if (index == 4) {
-            Navigator.of(context).pushReplacementNamed('/akunpage');
+            // Navigator.of(context).pushReplacementNamed('/akunpage');
           } else if (index == 0) {
             Navigator.of(context).pushReplacementNamed('/homepage');
           }

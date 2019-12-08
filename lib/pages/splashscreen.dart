@@ -34,12 +34,13 @@ class _SplashScreenState extends State<SplashScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Image.asset("assets/images/logo.png",
+                      Image.asset("assets/images/kabah.png",
+                      color: Colors.white70,
                       width: 80.0,
                       height: 100.0,
                       fit: BoxFit.cover,),
                       Padding(padding: EdgeInsets.only(top: 30),),
-                      Text("PABANANG EDU",
+                      Text("Program KP",
                           style: new TextStyle(
                               color: Colors.white,
                               fontSize: 20.0,
@@ -62,7 +63,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       ),
                       SizedBox(height: 10.0),
                       Text(
-                        "© PabanangDev",
+                        "© MelekTechnology",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 10.0,

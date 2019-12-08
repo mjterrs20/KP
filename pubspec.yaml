@@ -92,7 +92,12 @@ flutter:
    - assets/images/haji.png
    - assets/images/umrah.png
    - assets/images/umrah1.png
-
+   - assets/images/kabah.png
+   - assets/images/umrahfair.jpg
+   - assets/images/11.png
+   - assets/images/12.png
+   - assets/images/13.png
+   - assets/images/mosque.png
   
   fonts:
     - family: Comfortaa

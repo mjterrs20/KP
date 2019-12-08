@@ -106,7 +106,7 @@ class _HomeIconPageState extends State<HomeIconPage> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.of(context).pushNamed('/panduanbudaya');
+              Navigator.of(context).pushNamed('/infolokasi');
             },
             child: Container(
               margin: EdgeInsets.only(right: 25),
@@ -122,7 +122,7 @@ class _HomeIconPageState extends State<HomeIconPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Image(
-                          image: AssetImage('assets/images/culture.png'),
+                          image: AssetImage('assets/images/mosque.png'),
                           width: 40.0,
                           height: 40.0,
                           color: Colors.white,
@@ -138,7 +138,7 @@ class _HomeIconPageState extends State<HomeIconPage> {
                   Padding(
                     padding: const EdgeInsets.only(top: 10.0),
                     child: Text(
-                      "Panduan Budaya",
+                      "Info Lokasi",
                       style: TextStyle(
                           color: Colors.black,
                           fontFamily: 'Camfortaa',

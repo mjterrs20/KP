@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-
+import 'package:kp/pages/diskon.dart';
 
 class AdvetorialWidget extends StatefulWidget {
   @override
@@ -180,7 +179,7 @@ class _AdvetorialWidgetState extends State<AdvetorialWidget> {
                         fit: BoxFit.cover,
                         // colorFilter:
                         //     ColorFilter.mode(Colors.black87, BlendMode.darken),
-                        image: AssetImage('assets/images/conseling.jpg'))),
+                        image: AssetImage('assets/images/umrahfair.jpg'))),
               ),
               Container(
                 width: screenSize.width,
@@ -195,48 +194,56 @@ class _AdvetorialWidgetState extends State<AdvetorialWidget> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        'Konseling Jurusan',
-                        style: TextStyle(fontFamily: 'Comfortaa',
-                            fontSize: 18, fontWeight: FontWeight.bold),
+                        'Umrah Fair',
+                        style: TextStyle(
+                            fontFamily: 'Comfortaa',
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold),
                       ),
                       Text(
-                          'Cari Potensi Diri Untuk Mengatuhi Minat Bakat Kuliah...', style: TextStyle(fontFamily: 'Comfortaa'),),
+                        'Datang dan Ramaikan Telkomsel Umrah Fair Roadshow Kota Kasablanka..',
+                        style: TextStyle(fontFamily: 'Comfortaa'),
+                      ),
                       Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: <Widget>[
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.pushNamed(context, '/jurusankupage');
-                              },
-                              child: Container(
-                                margin: EdgeInsets.only(top: 10),
-                                padding: EdgeInsets.all(10),
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                    bottomLeft: Radius.circular(8),
-                                    bottomRight: Radius.circular(8),
-                                    topLeft: Radius.circular(8),
-                                    topRight: Radius.circular(8),
-                                  ),
-                                  gradient: LinearGradient(
-                                    colors: <Color>[
-                                      Color(0xFF8BCCAB),
-                                      Color(0xFFF2A527),
-                                    ],
-                                  ),
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: <Widget>[
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          DiskonPage('https://www.telkomsel.com/umrahfair')));
+                            },
+                            child: Container(
+                              margin: EdgeInsets.only(top: 10),
+                              padding: EdgeInsets.all(10),
+                              decoration: const BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(8),
+                                  bottomRight: Radius.circular(8),
+                                  topLeft: Radius.circular(8),
+                                  topRight: Radius.circular(8),
                                 ),
-                                child: Text(
-                                  "Selengkapnya...",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'Comfortaa',
-                                      color: Colors.white),
+                                gradient: LinearGradient(
+                                  colors: <Color>[
+                                    Color(0xFF60B683),
+                                    Color(0xFFB7EB21),
+                                  ],
                                 ),
                               ),
-                            )
-                          ],
-                        ),
+                              child: Text(
+                                "Check Event..",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Comfortaa',
+                                    color: Colors.white),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ],
                   ),
                 ),

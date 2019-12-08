@@ -20,7 +20,7 @@ class _BeritaWidgetState extends State<BeritaWidget> {
                 context,
                 MaterialPageRoute(
                     builder: (BuildContext context) => BeritaDetailPage(
-                        'https://edukasi.kompas.com/read/2019/11/16/16271351/perkuat-link-and-match-kawan-lama-gelar-workshop-dosen-nasional')));
+                        'https://www.liputan6.com/news/read/4088548/indeks-bps-memuaskan-menag-penyelenggaraan-haji-tahun-ini-sangat-menantang')));
           },
           child: Column(
             children: <Widget>[
@@ -46,7 +46,7 @@ class _BeritaWidgetState extends State<BeritaWidget> {
                 context,
                 MaterialPageRoute(
                     builder: (BuildContext context) => BeritaDetailPage(
-                        'https://edukasi.kompas.com/read/2019/11/15/11533411/terbaru-jadwal-resmi-snmptn-2020-resmi-diluncurkan-hari-ini?page=all')));
+                        'https://news.detik.com/berita/d-4812167/menhub-menag-sepakat-jemaah-haji-2020-berangkat-dari-bandara-kertajati')));
           },
           child: Column(
             children: <Widget>[
@@ -72,7 +72,7 @@ class _BeritaWidgetState extends State<BeritaWidget> {
                 context,
                 MaterialPageRoute(
                     builder: (BuildContext context) => BeritaDetailPage(
-                        'https://edukasi.kompas.com/read/2019/11/16/09221331/lulusan-sma-dan-smk-bca-buka-magang-cs-dan-teller-dengan-beasiswa')));
+                        'https://haji.okezone.com/read/2019/11/28/398/2135628/menag-usul-ke-dpr-biaya-haji-2020-rp35-juta')));
           },
           child: Column(
             children: <Widget>[
@@ -98,7 +98,7 @@ class _BeritaWidgetState extends State<BeritaWidget> {
                 context,
                 MaterialPageRoute(
                     builder: (BuildContext context) => BeritaDetailPage(
-                        'https://edukasi.kompas.com/read/2019/11/15/14170461/wajib-tahu-ini-4-perubahan-penting-dalam-snmptn-dan-sbmp')));
+                        'https://news.detik.com/berita-jawa-timur/d-4707276/ribuan-obat-dan-jamu-sitaan-jemaah-haji-dimusnahkan?_ga=2.99328925.2049869072.1575787549-483235231.1556072754')));
           },
           child: Column(
             children: <Widget>[

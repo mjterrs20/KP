@@ -18,8 +18,7 @@ import 'package:kp/pages/jurusanku.dart';
 import 'package:kp/pages/resgister.dart';
 import 'package:kp/pages/panduanhaji.dart';
 import 'package:kp/pages/panduanumrah.dart';
-import 'package:kp/pages/panduanbudaya.dart';
-
+import 'package:kp/pages/infolokasi.dart';
 
 void main() {
   return runApp( MyApp ());
@@ -48,7 +47,7 @@ class MyApp extends StatelessWidget {
         '/jurusankupage': (BuildContext context) => JurusankuPage(),
         '/panduanhaji': (BuildContext context) => PanduanHajiPage(),
         '/panduanumrah': (BuildContext context) => PanduanUmrahPage(),
-        '/panduanbudaya': (BuildContext context) => PanduanBudayaPage(),
+        '/infolokasi': (BuildContext context) => InfoLokasiPage(),
       },
       theme: ThemeData(
         primaryColor: Colors.green[600],

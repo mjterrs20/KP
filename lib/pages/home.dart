@@ -26,9 +26,9 @@ class _HomePageState extends State<HomePage> {
   }
 
   List imgList = [
-    'assets/images/ruangguru.jpeg',
-    'assets/images/quiper.jpeg',
-    'assets/images/zenius.jpeg'
+    'assets/images/11.png',
+    'assets/images/12.png',
+    'assets/images/13.png'
   ];
   List<T> map<T>(List list, Function handler) {
     List<T> result = [];
@@ -101,14 +101,14 @@ class _HomePageState extends State<HomePage> {
                         return GestureDetector(
                           onTap: () {
                             print(imgAssets);
-                            if (imgAssets == 'assets/images/ruangguru.jpeg') {
-                              url = 'http://bimbel.ruangguru.com/promo';
+                            if (imgAssets == 'assets/images/11.png') {
+                              url = 'http://www.ukiabookstore.com/23-hajj-umrah-travel';
                             }
-                            if (imgAssets == 'assets/images/quiper.jpeg') {
-                              url = 'https://www.quipper.com/id/';
+                            if (imgAssets == 'assets/images/12.png') {
+                              url = 'http://www.maktour.co.id/umrah_maktour/promo-paket-umroh-khusus                                                                    ';
                             }
-                            if (imgAssets == 'assets/images/zenius.jpeg') {
-                              url = 'https://www.zenius.net/';
+                            if (imgAssets == 'assets/images/13.png') {
+                              url = 'https://www.blibli.com/promosi/trv-esq-umroh';
                             }
                             // buat image assets
                             print("woy" + url);
@@ -198,13 +198,13 @@ class _HomePageState extends State<HomePage> {
           //   print(index);
           // });
           if (index == 1) {
-            Navigator.of(context).pushReplacementNamed('/tipspage');
+            // Navigator.of(context).pushReplacementNamed('/tipspage');
           } else if (index == 2) {
             Navigator.of(context).pushReplacementNamed('/chatbotpage');
           } else if (index == 3) {
-            Navigator.of(context).pushReplacementNamed('/profilpage');
+            // Navigator.of(context).pushReplacementNamed('/profilpage');
           } else if (index == 4) {
-            Navigator.of(context).pushReplacementNamed('/akunpage');
+            // Navigator.of(context).pushReplacementNamed('/akunpage');
           } else if (index == 0) {
             Navigator.of(context).pushReplacementNamed('/homepage');
           }
