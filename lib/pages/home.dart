@@ -9,6 +9,9 @@ import 'package:kp/utils/colors.dart';
 import 'package:kp/pages/diskon.dart';
 
 class HomePage extends StatefulWidget {
+  // HomePage({Key key, this.title, this.uid}) : super(key: key); //update this to include the uid in the constructor
+  // final String title;
+  // final String uid;
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -21,6 +24,7 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     index = 0;
   }
+
   List imgList = [
     'assets/images/ruangguru.jpeg',
     'assets/images/quiper.jpeg',
@@ -163,13 +167,20 @@ class _HomePageState extends State<HomePage> {
             child: HomeIconPage(),
           ),
           Container(
-            padding: const EdgeInsets.fromLTRB(20, 0, 10, 0),
-            child: Text("Berita Terkini"),
+            padding: const EdgeInsets.fromLTRB(12, 5, 10, 0),
+            child: Text(
+              "Berita Terkini",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'Camfortaa',
+                  fontWeight: FontWeight.w800,
+                  fontSize: 15.0),
+            ),
           ),
           Container(
             height: 120.0,
             margin: EdgeInsets.only(
-              top: 15.0,
+              top: 20.0,
               bottom: 5.0,
             ),
             child: BeritaWidget(),
@@ -186,20 +197,17 @@ class _HomePageState extends State<HomePage> {
           //   this.index = index;
           //   print(index);
           // });
-          if(index == 1){
+          if (index == 1) {
             Navigator.of(context).pushReplacementNamed('/tipspage');
-          }
-          else if(index == 2){
+          } else if (index == 2) {
             Navigator.of(context).pushReplacementNamed('/chatbotpage');
-          }else if(index == 3){
+          } else if (index == 3) {
             Navigator.of(context).pushReplacementNamed('/profilpage');
-          }
-          else if(index == 4){
+          } else if (index == 4) {
             Navigator.of(context).pushReplacementNamed('/akunpage');
-          }else if(index == 0){
+          } else if (index == 0) {
             Navigator.of(context).pushReplacementNamed('/homepage');
           }
-          
         },
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -224,8 +232,8 @@ class _HomePageState extends State<HomePage> {
                       fontSize: 14.0,
                       fontFamily: 'Camfortaa'))),
           BottomNavigationBarItem(
-            icon: Icon(Icons.group),
-            title: Text("Team",
+            icon: Icon(Icons.email),
+            title: Text("Inbox",
                 style: new TextStyle(
                     color: Colors.black,
                     fontSize: 14.0,

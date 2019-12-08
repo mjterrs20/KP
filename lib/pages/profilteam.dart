@@ -71,8 +71,8 @@ class _ProfilTeamPageState extends State<ProfilTeamPage> {
                       fontSize: 14.0,
                       fontFamily: 'Camfortaa'))),
           BottomNavigationBarItem(
-            icon: Icon(Icons.group),
-            title: Text("Team",
+            icon: Icon(Icons.email),
+            title: Text("Inbox",
                 style: new TextStyle(
                     color: Colors.black,
                     fontSize: 14.0,

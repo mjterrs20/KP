@@ -15,9 +15,14 @@ import 'package:kp/pages/profilteam.dart';
 import 'package:kp/pages/akun.dart';
 import 'package:kp/pages/login.dart';
 import 'package:kp/pages/jurusanku.dart';
+import 'package:kp/pages/resgister.dart';
+import 'package:kp/pages/panduanhaji.dart';
+import 'package:kp/pages/panduanumrah.dart';
+import 'package:kp/pages/panduanbudaya.dart';
+
 
 void main() {
-  return runApp( MyApp());
+  return runApp( MyApp ());
 }
 
 class MyApp extends StatelessWidget {
@@ -25,7 +30,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
        debugShowCheckedModeBanner: false,
-      title: 'Pabanang',
+      title: 'KP',
       home: SplashScreen(),
       routes: <String, WidgetBuilder>{
         '/homepage': (BuildContext context) => HomePage(),
@@ -41,6 +46,9 @@ class MyApp extends StatelessWidget {
         '/akunpage': (BuildContext context) => AkunPage(),
         '/loginpage': (BuildContext context) => LoginPage(),
         '/jurusankupage': (BuildContext context) => JurusankuPage(),
+        '/panduanhaji': (BuildContext context) => PanduanHajiPage(),
+        '/panduanumrah': (BuildContext context) => PanduanUmrahPage(),
+        '/panduanbudaya': (BuildContext context) => PanduanBudayaPage(),
       },
       theme: ThemeData(
         primaryColor: Colors.green[600],
@@ -70,6 +78,18 @@ class Coba extends StatelessWidget {
       home:  CobaPage(),
       routes: <String, WidgetBuilder>{
         '/secondpage': (BuildContext context) => SecondPage(),
+      },
+    );
+  }
+}
+class Register extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'testing',
+      home:  RegisterPage(),
+      routes: <String, WidgetBuilder>{
+        '/homepage': (BuildContext context) => HomePage(),
       },
     );
   }

@@ -14,7 +14,7 @@ class _BeritaWidgetState extends State<BeritaWidget> {
       // physics: const AlwaysScrollableScrollPhysics(),
       padding: EdgeInsets.only(left: 10.0),
       children: <Widget>[
-        GestureDetector(
+        InkWell(
           onTap: () {
             Navigator.push(
                 context,
@@ -40,7 +40,7 @@ class _BeritaWidgetState extends State<BeritaWidget> {
             ],
           ),
         ),
-        GestureDetector(
+        InkWell(
           onTap: () {
             Navigator.push(
                 context,
@@ -66,7 +66,7 @@ class _BeritaWidgetState extends State<BeritaWidget> {
             ],
           ),
         ),
-        GestureDetector(
+        InkWell(
           onTap: () {
             Navigator.push(
                 context,
@@ -92,7 +92,7 @@ class _BeritaWidgetState extends State<BeritaWidget> {
             ],
           ),
         ),
-        GestureDetector(
+        InkWell(
           onTap: () {
             Navigator.push(
                 context,

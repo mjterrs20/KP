@@ -14,7 +14,7 @@ class _HomeIconPageState extends State<HomeIconPage> {
         children: <Widget>[
           GestureDetector(
             onTap: () {
-              Navigator.of(context).pushNamed('/universitaspage');
+              Navigator.of(context).pushNamed('/panduanhaji');
             },
             child: Container(
               margin: EdgeInsets.only(right: 25),
@@ -23,23 +23,44 @@ class _HomeIconPageState extends State<HomeIconPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Image(
-                    image: AssetImage('assets/images/university.png'),
-                    width: 50.0,
-                    height: 50.0,
-                    color: Colors.white,
+                  Container(
+                    width: 70.0,
+                    height: 70.0,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Image(
+                          image: AssetImage('assets/images/haji.png'),
+                          width: 40.0,
+                          height: 40.0,
+                          color: Colors.white,
+                        ),
+                      ],
+                    ),
+                    decoration: BoxDecoration(
+                      color: TemaApp.greenColor,
+                      borderRadius:
+                          new BorderRadius.all(const Radius.circular(20.0)),
+                    ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10.0),
+                    child: Text(
+                      "Panduan Haji",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'Camfortaa',
+                          fontWeight: FontWeight.w400,
+                          fontSize: 12.0),
+                    ),
+                  )
                 ],
-              ),
-              decoration: BoxDecoration(
-                color: TemaApp.yellowsColor,
-                borderRadius: new BorderRadius.all(const Radius.circular(20.0)),
               ),
             ),
           ),
           GestureDetector(
             onTap: () {
-              Navigator.of(context).pushNamed('/jurusanpage');
+              Navigator.of(context).pushNamed('/panduanumrah');
             },
             child: Container(
               margin: EdgeInsets.only(right: 25),
@@ -48,23 +69,44 @@ class _HomeIconPageState extends State<HomeIconPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Image(
-                    image: AssetImage('assets/images/jurusan.png'),
-                    width: 50.0,
-                    height: 50.0,
-                    color: Colors.white,
+                  Container(
+                    width: 70.0,
+                    height: 70.0,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Image(
+                          image: AssetImage('assets/images/umrah1.png'),
+                          width: 40.0,
+                          height: 40.0,
+                          color: Colors.white,
+                        ),
+                      ],
+                    ),
+                    decoration: BoxDecoration(
+                      color: TemaApp.greenColor,
+                      borderRadius:
+                          new BorderRadius.all(const Radius.circular(20.0)),
+                    ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10.0),
+                    child: Text(
+                      "Panduan Umrah",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'Camfortaa',
+                          fontWeight: FontWeight.w400,
+                          fontSize: 12.0),
+                    ),
+                  )
                 ],
-              ),
-              decoration: BoxDecoration(
-                color: TemaApp.yellowsColor,
-                borderRadius: new BorderRadius.all(const Radius.circular(20.0)),
               ),
             ),
           ),
           GestureDetector(
             onTap: () {
-              Navigator.of(context).pushNamed('/beasiswapage');
+              Navigator.of(context).pushNamed('/panduanbudaya');
             },
             child: Container(
               margin: EdgeInsets.only(right: 25),
@@ -73,17 +115,38 @@ class _HomeIconPageState extends State<HomeIconPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Image(
-                    image: AssetImage('assets/images/beasiswa.png'),
-                    width: 50.0,
-                    height: 50.0,
-                    color: Colors.white,
+                  Container(
+                    width: 70.0,
+                    height: 70.0,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Image(
+                          image: AssetImage('assets/images/culture.png'),
+                          width: 40.0,
+                          height: 40.0,
+                          color: Colors.white,
+                        ),
+                      ],
+                    ),
+                    decoration: BoxDecoration(
+                      color: TemaApp.greenColor,
+                      borderRadius:
+                          new BorderRadius.all(const Radius.circular(20.0)),
+                    ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10.0),
+                    child: Text(
+                      "Panduan Budaya",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'Camfortaa',
+                          fontWeight: FontWeight.w400,
+                          fontSize: 12.0),
+                    ),
+                  )
                 ],
-              ),
-              decoration: BoxDecoration(
-                color: TemaApp.yellowsColor,
-                borderRadius: new BorderRadius.all(const Radius.circular(20.0)),
               ),
             ),
           ),
